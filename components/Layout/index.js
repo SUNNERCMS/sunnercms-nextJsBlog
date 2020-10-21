@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-24 15:36:58
- * @LastEditTime: 2020-09-24 21:35:26
+ * @LastEditTime: 2020-09-28 21:22:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/components/Layout/index.js
@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 const name = 'zhaoxiang.sun'
 
-export const siteTitle = 'zhaoxiang.xun-blog'
+export const siteTitle = 'sunzhaoxiang-blog'
 
 export default function Layout({ children, home }) {
   return (
