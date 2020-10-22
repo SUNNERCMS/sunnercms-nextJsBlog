@@ -1,18 +1,5 @@
 import Layout from '../components/Layout/index'
 import styles from './index.module.scss'
-import utilStyles from '../styles/utils.module.scss'
-// 从本质上讲，getStaticProps允许您告诉Next.js：“嘿，此页面具有某些数据依赖关系-因此，在构建时预渲染此页面时，请确保先解决它们！”
-// getStaticProps运行只在服务器端。
-// 它永远不会在客户端上运行。它甚至不会包含在浏览器的JS包中。这意味着您可以编写诸如直接数据库查询之类的代码，而无需将其发送到浏览器。
-
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData()
-//   return {
-//     props: {
-//       allPostsData
-//     }
-//   }
-// }
 
 export default function Home({ allPostsData }) {
   return (

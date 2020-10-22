@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-24 19:52:46
- * @LastEditTime: 2020-09-24 20:26:50
+ * @LastEditTime: 2020-10-22 23:20:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/pages/posts/[id].js
@@ -11,7 +11,7 @@ import Layout from '../../components/Layout/index'
 import Date from '../../components/Date/index'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
-import utilStyles from '../../styles/utils.module.css'
+import utilStyles from '../../styles/utils.module.scss'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
