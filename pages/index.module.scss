@@ -109,6 +109,22 @@
       }
     }
   }
+
+  .drawerButton {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 30;
+
+    .closeIcon i {
+      padding: 5px;
+      background-color: #fff;
+    }
+    .closeIcon i:hover {
+      padding: 5px;
+      background-color: #eee;
+    }
+  }
 }
 
 .homePageContainer:after {

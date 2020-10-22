@@ -51,6 +51,11 @@ export default function Home({ allPostsData }) {
             </div>
           </div>
         </div>
+        <div className={styles.drawerButton}>
+          <div className={styles.closeIcon}>
+            <i className="iconfont icon-wei-"></i>
+          </div>
+        </div>
       </div>
     </Layout>
   )
