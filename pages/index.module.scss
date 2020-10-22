@@ -1,0 +1,132 @@
+.homePageContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  background-image: url(https://yssimage.oss-cn-hangzhou.aliyuncs.com/11.jpg);
+  background-position: center;
+  background-attachment: fixed; //当页面的其余部分滚动时，背景图像不会移动。
+  background-repeat: no-repeat;
+  background-size:100% 100%; //否则横向拉伸
+
+  .homeInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: 10;
+
+    .title {
+      font-size: 28px;
+    }
+    .subTitle {
+      font-size: 14px;
+      margin: 20px 0px;
+      letter-spacing: 10px;
+    }
+    .enterButton {
+      border: none;
+      padding: 8px 18px;
+      font-size: 14px;
+      border-radius: 2px;
+      background-color: #1E9FFF;
+      margin-top: 20px;
+      user-select: none;
+    }
+    .enterButton:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .rightDrawer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-bottom: 100vh solid white;
+    border-left: 25vh solid transparent;
+    height: 0;
+    width: 40vw;
+    z-index: 20;
+    animation: drawerShow 1.2s linear 1;
+
+    .drawerInfo {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: -30px;
+
+      .drawerImgContainer {
+        box-sizing: border-box;
+        padding: 2px;
+        width: 12rem;
+        height: 12rem;
+        border: 1px solid #999;
+        border-radius: 6rem;
+        overflow: hidden;
+        margin-bottom: 60px;
+        margin-top: -80px;
+
+        .headerImage {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .drawerName {
+        font-size: 30px;
+        color: #333;
+      }
+      .nameDes {
+        font-size: 24px;
+        color: #666;
+      }
+      .desText {
+        margin-bottom: 10px;
+      }
+      .linkIconBar i {
+        margin: 0px 15px;
+        text-align: justify;
+      }
+      .concatInfo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 25px;
+
+        span {
+          margin-left: 5px;
+        }
+
+        .concatInfoTopLine i {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.homePageContainer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+}
+
+@keyframes drawerShow {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(50vw);
+  }
+}

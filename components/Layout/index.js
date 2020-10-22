@@ -1,14 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2020-09-24 15:36:58
- * @LastEditTime: 2020-09-28 21:22:56
+ * @LastEditTime: 2020-10-22 17:31:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/components/Layout/index.js
  */
 import Head from 'next/head'
-import styles from './index.module.css'
-import utilStyles from '../../styles/utils.module.css'
+import styles from './index.module.scss'
+import utilStyles from '../../styles/utils.module.scss'
 import Link from 'next/link'
 
 const name = 'zhaoxiang.sun'
@@ -20,6 +20,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/aliIcon/iconfont.css"></link>
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -33,7 +34,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         {home ? (
           <>
             <img
@@ -61,15 +62,15 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
-      </header>
+      </header> */}
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
+      )} */}
     </div>
   )
 }
