@@ -41,9 +41,27 @@
     }
   }
 
+  .navigatoDrawer {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    transition: top 2s;
+  }
+
+  .navigatoDrawer:hover {
+    transform: scale(1.1);
+  }
+
   .rightDrawer {
     position: fixed;
-    right: 0;
+    right: -50vw;
     top: 0;
     bottom: 0;
     border-bottom: 100vh solid white;
@@ -51,7 +69,7 @@
     height: 0;
     width: 40vw;
     z-index: 20;
-    animation: drawerShow 1.2s linear 1;
+    transition: right 0.6s;
 
     .drawerInfo {
       width: 100%;
@@ -65,10 +83,10 @@
       .drawerImgContainer {
         box-sizing: border-box;
         padding: 2px;
-        width: 12rem;
-        height: 12rem;
+        width: 28vh;
+        height: 28vh;
         border: 1px solid #999;
-        border-radius: 6rem;
+        border-radius: 14vh;
         overflow: hidden;
         margin-bottom: 60px;
         margin-top: -80px;
@@ -108,23 +126,30 @@
         }
       }
     }
+    .drawerButton {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      z-index: 30;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+    }
+    .drawerButton:hover {
+      transform: scale(1.1);
+    }
   }
 
-  .drawerButton {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 30;
-
-    .closeIcon i {
-      padding: 5px;
-      background-color: #fff;
-    }
-    .closeIcon i:hover {
-      padding: 5px;
-      background-color: #eee;
-    }
+  .rightDrawer.open {
+    right: 0px;
   }
+  .rightDrawer.close {
+    right: -50vw;
+  }
+
 }
 
 .homePageContainer:after {
