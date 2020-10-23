@@ -1,7 +1,18 @@
-import Layout from '../components/Layout/index'
-import styles from './index.module.scss'
+import Layout from '../components/Layout/index';
+import styles from './index.module.scss';
+import { useState } from 'react';
+import cls from 'classnames';
 
 export default function Home({ allPostsData }) {
+  const [rightDrawerStatus, setRightDrawerStatus] = useState(false);
+  // 右侧导航信息栏，默认关闭，点击打开
+  const rightDrawerClass = cls(styles.rightDrawer, rightDrawerStatus ? styles.open : styles.close);
+  const openRightDrawer = () => {
+    setRightDrawerStatus(true);
+  }
+  const closeRightDrawer = () => {
+    setRightDrawerStatus(false);
+  }
   return (
     <Layout home>
       <div className={styles.homePageContainer}>
@@ -11,8 +22,13 @@ export default function Home({ allPostsData }) {
           <div className={styles.subTitle}>剑气纵横三万里，一剑光寒十九洲</div>
           <div className={styles.enterButton}>Enter Blog</div>
         </div>
+        <div className={styles.navigatoDrawer} onClick={openRightDrawer}>
+          <svg class="icon" aria-hidden="true">
+            <use xlinkHref="#icon-daohangzhankai1"></use>
+          </svg>
+        </div>
         {/* 首页右侧抽屉 */}
-        <div className={styles.rightDrawer}>
+        <div className={rightDrawerClass}>
           <div className={styles.drawerInfo}>
             <div className={styles.drawerImgContainer}>
               <img
@@ -37,10 +53,10 @@ export default function Home({ allPostsData }) {
               <i className="iconfont icon-icon-email"><span>sunnercms@163.com</span></i>
             </div>
           </div>
-        </div>
-        <div className={styles.drawerButton}>
-          <div className={styles.closeIcon}>
-            <i className="iconfont icon-wei-"></i>
+          <div className={styles.drawerButton} onClick={closeRightDrawer}>
+            <svg class="icon" aria-hidden="true">
+              <use xlinkHref="#icon-daohangshouqi"></use>
+            </svg>
           </div>
         </div>
       </div>
