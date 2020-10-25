@@ -18,6 +18,7 @@
     align-items: center;
     color: white;
     z-index: 10;
+    animation: homeInfoScale 1s ease-out 1 ;
 
     .title {
       font-size: 28px;
@@ -40,9 +41,17 @@
       opacity: 0.8;
     }
   }
+  @keyframes homeInfoScale {
+    0% {
+      transform: scale(0.3);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+  }
 
   .navigatoDrawer {
-    position: absolute;
+    position: fixed;
     top: 25px;
     right: 25px;
     z-index: 15;
@@ -161,13 +170,4 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.5);
-}
-
-@keyframes drawerShow {
-  0% {
-    transform: translateX(0vw);
-  }
-  100% {
-    transform: translateX(50vw);
-  }
 }

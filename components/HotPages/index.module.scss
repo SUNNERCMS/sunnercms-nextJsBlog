@@ -1,0 +1,81 @@
+.hotPagesContainer {
+  padding: 40px 130px;
+  h1 {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 10px;
+    font-weight: 500;
+  }
+  h1::after {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    content: "";
+    left: 50%;
+    margin-left: -25px;
+    bottom: -4px;
+    background: #00c2ff;
+  }
+  .titleDesc {
+    color: #888;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .contents {
+    display: flex;
+
+    .contentItem {
+      margin: 0 10px;
+      flex: 1;
+
+      .imgContainer{
+        width: 100%;
+        height: 244px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        img {
+          height: 100%;
+        }
+        img:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .itemInfo {
+        position: relative;
+        height: 220px;
+        padding: 30px 15px;
+        background-color: #FAF9F9;
+
+        .itemName {
+          color: #333;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        .itemDate {
+          color: #bbb;
+          font-size: 14px;
+          font-family: "Helvetica Neue";
+        }
+        p {
+          color: #999;
+          font-size: 16px;
+          overflow:hidden; 
+          text-overflow:ellipsis;
+          display:-webkit-box; 
+          -webkit-box-orient:vertical;
+          -webkit-line-clamp:2; 
+        }
+        .readMore {
+          position: absolute;
+          bottom: 25px;
+          color: #29b6f6;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

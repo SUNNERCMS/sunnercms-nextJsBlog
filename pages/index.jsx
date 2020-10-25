@@ -1,29 +1,39 @@
 import Layout from '../components/Layout/index';
 import styles from './index.module.scss';
-import { useState } from 'react';
+import HotPages from '../components/HotPages/index';
+import { useEffect, useState } from 'react';
 import cls from 'classnames';
 
 export default function Home({ allPostsData }) {
+  // 右侧导航栏状态及处理事件
   const [rightDrawerStatus, setRightDrawerStatus] = useState(false);
+  // 首页信息模块的动画过度效果
+  // const [homeInfoScale, setHomeInfoScale] = useState(false);
   // 右侧导航信息栏，默认关闭，点击打开
   const rightDrawerClass = cls(styles.rightDrawer, rightDrawerStatus ? styles.open : styles.close);
+  // const homeInfoScaleClass = cls(styles.homeInfoContainer, homeInfoScale ? styles.scaleLage : '');
   const openRightDrawer = () => {
     setRightDrawerStatus(true);
   }
   const closeRightDrawer = () => {
     setRightDrawerStatus(false);
   }
+  // useEffect(() => {
+  //   console.log(1111);
+  //   setHomeInfoScale(true);
+  // }, [])
+
   return (
     <Layout home>
       <div className={styles.homePageContainer}>
         {/* 首页中间信息展示 */}
         <div className={styles.homeInfoContainer}>
-          <div className={styles.title}>去&nbsp;哪&nbsp;儿</div>
+          <div className={styles.title}>孙&nbsp;赵&nbsp;祥</div>
           <div className={styles.subTitle}>剑气纵横三万里，一剑光寒十九洲</div>
           <div className={styles.enterButton}>Enter Blog</div>
         </div>
         <div className={styles.navigatoDrawer} onClick={openRightDrawer}>
-          <svg class="icon" aria-hidden="true">
+          <svg className="icon" aria-hidden="true">
             <use xlinkHref="#icon-daohangzhankai1"></use>
           </svg>
         </div>
@@ -54,12 +64,14 @@ export default function Home({ allPostsData }) {
             </div>
           </div>
           <div className={styles.drawerButton} onClick={closeRightDrawer}>
-            <svg class="icon" aria-hidden="true">
+            <svg className="icon" aria-hidden="true">
               <use xlinkHref="#icon-daohangshouqi"></use>
             </svg>
           </div>
         </div>
       </div>
+      {/* 热门文章 */}
+      <HotPages />
     </Layout>
   )
 }
