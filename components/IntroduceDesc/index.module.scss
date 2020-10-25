@@ -1,0 +1,14 @@
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+
+  .introTitle {
+    font-size: 28px;
+  }
+  p {
+    font-size: 14px;
+  }
+}

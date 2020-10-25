@@ -1,6 +1,10 @@
 import Layout from '../components/Layout/index';
 import styles from './index.module.scss';
 import HotPages from '../components/HotPages/index';
+import AboutLink from '../components/AboutLink/index';
+import IntroduceDesc from '../components/IntroduceDesc/index';
+import HomeFooter from '../components/HomeFooter/index';
+import CopyRight from '../components/CopyRight/index';
 import { useEffect, useState } from 'react';
 import cls from 'classnames';
 
@@ -72,6 +76,10 @@ export default function Home({ allPostsData }) {
       </div>
       {/* 热门文章 */}
       <HotPages />
+      <AboutLink/>
+      <IntroduceDesc/>
+      <HomeFooter/>
+      <CopyRight/>
     </Layout>
   )
 }
