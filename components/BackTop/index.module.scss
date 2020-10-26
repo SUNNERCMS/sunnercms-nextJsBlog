@@ -1,0 +1,24 @@
+.backTopContainer {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background-color: #666;
+  // font-size: 10px;
+  // width: 40px;
+  // height: 40px;
+
+  .backTopIcon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 24px;
+  }
+}
+.backTopContainer.backTopShow {
+  display: block;
+}
+.backTopContainer.backTopHide {
+  display: none;
+}

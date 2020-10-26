@@ -4,18 +4,24 @@ import HotPages from '../components/HotPages/index';
 import AboutLink from '../components/AboutLink/index';
 import IntroduceDesc from '../components/IntroduceDesc/index';
 import HomeFooter from '../components/HomeFooter/index';
+import BackTop from '../components/BackTop/index';
 // import CopyRight from '../components/CopyRight/index';
 import { useEffect, useState } from 'react';
 import cls from 'classnames';
 
 export default function Home({ allPostsData }) {
+  let backTopScrollFlag = true;
   // 右侧导航栏状态及处理事件
   const [rightDrawerStatus, setRightDrawerStatus] = useState(false);
   const [modalMaskStatus, setModalMaskStatus] = useState(false);
+  // 置顶按钮的显示隐藏状态
+  const [backTopStatus, setBackTopStatus] = useState(false);
   // 右侧导航信息栏，默认关闭，点击打开
   const rightDrawerClass = cls(styles.rightDrawer, rightDrawerStatus ? styles.open : styles.close);
   const modalMaskClass = cls(styles.modalMask, modalMaskStatus ? styles.modalMaskOpen : styles.modalMaskClose);
-  
+  // 置顶按钮的显示隐藏，样式控制
+  // const backTopClass = cls(backTopStatus ? styles.backTopShow : styles.backTopHide);
+
   const openRightDrawer = () => {
     setRightDrawerStatus(true);
     setModalMaskStatus(true);
@@ -28,10 +34,27 @@ export default function Home({ allPostsData }) {
     setRightDrawerStatus(false);
     setModalMaskStatus(false);
   }
-  // useEffect(() => {
-  //   console.log(1111);
-  //   setHomeInfoScale(true);
-  // }, [])
+
+  const scrollYHandle = () => {
+    if(window.scrollY > 300 && backTopScrollFlag) {
+      setBackTopStatus(true);
+      backTopScrollFlag = false;
+    } else if(window.scrollY === 0) {
+      setBackTopStatus(false);
+      backTopScrollFlag = true;
+    }
+  }
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    window.addEventListener('scroll', scrollYHandle);
+    return () => {
+      window.removeEventListener('scroll', scrollYHandle);
+    }
+  }, [])
 
   return (
     <Layout home>
@@ -86,6 +109,7 @@ export default function Home({ allPostsData }) {
       <AboutLink/>
       <IntroduceDesc/>
       <HomeFooter/>
+      <BackTop backTopStatus={backTopStatus}/>
     </Layout>
   )
 }
