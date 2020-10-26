@@ -4,23 +4,29 @@ import HotPages from '../components/HotPages/index';
 import AboutLink from '../components/AboutLink/index';
 import IntroduceDesc from '../components/IntroduceDesc/index';
 import HomeFooter from '../components/HomeFooter/index';
-import CopyRight from '../components/CopyRight/index';
+// import CopyRight from '../components/CopyRight/index';
 import { useEffect, useState } from 'react';
 import cls from 'classnames';
 
 export default function Home({ allPostsData }) {
   // 右侧导航栏状态及处理事件
   const [rightDrawerStatus, setRightDrawerStatus] = useState(false);
-  // 首页信息模块的动画过度效果
-  // const [homeInfoScale, setHomeInfoScale] = useState(false);
+  const [modalMaskStatus, setModalMaskStatus] = useState(false);
   // 右侧导航信息栏，默认关闭，点击打开
   const rightDrawerClass = cls(styles.rightDrawer, rightDrawerStatus ? styles.open : styles.close);
-  // const homeInfoScaleClass = cls(styles.homeInfoContainer, homeInfoScale ? styles.scaleLage : '');
+  const modalMaskClass = cls(styles.modalMask, modalMaskStatus ? styles.modalMaskOpen : styles.modalMaskClose);
+  
   const openRightDrawer = () => {
     setRightDrawerStatus(true);
+    setModalMaskStatus(true);
   }
   const closeRightDrawer = () => {
     setRightDrawerStatus(false);
+    setModalMaskStatus(false);
+  }
+  const modalMaskHandle = () => {
+    setRightDrawerStatus(false);
+    setModalMaskStatus(false);
   }
   // useEffect(() => {
   //   console.log(1111);
@@ -30,6 +36,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <div className={styles.homePageContainer}>
+        <div className={modalMaskClass} onClick={modalMaskHandle}></div>
         {/* 首页中间信息展示 */}
         <div className={styles.homeInfoContainer}>
           <div className={styles.title}>孙&nbsp;赵&nbsp;祥</div>
@@ -79,7 +86,6 @@ export default function Home({ allPostsData }) {
       <AboutLink/>
       <IntroduceDesc/>
       <HomeFooter/>
-      <CopyRight/>
     </Layout>
   )
 }
