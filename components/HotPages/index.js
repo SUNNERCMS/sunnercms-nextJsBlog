@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-24 21:55:20
- * @LastEditTime: 2020-10-25 23:54:40
+ * @LastEditTime: 2020-10-26 19:06:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/HotPages/index.js
@@ -22,6 +22,11 @@ class HotPages extends Component {
         <div className={styles.contents}>
           <div className={styles.contentItem}>
             <div className={styles.imgContainer}>
+              <div className={ `${styles.imgMask} ${styles.sweepToBottom}`}>
+                <div className={styles.copyIcon}>
+                  <i className="iconfont icon-fuzhilianjie"></i>
+                </div>
+              </div>
               <img
                 src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603651196522&di=a16700caf33d74f13f72dc94aeb6bdaf&imgtype=0&src=http%3A%2F%2Fimg.yuntiy.com%2Fillustration%2F1535098791991.jpg"
                 className={styles.itemImage}

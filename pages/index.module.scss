@@ -12,7 +12,6 @@
   background-attachment: fixed; //当页面的其余部分滚动时，背景图像不会移动。
   background-repeat: no-repeat;
   background-size:100% 100%; //否则横向拉伸
-
   .homeInfoContainer {
     display: flex;
     flex-direction: column;
@@ -180,11 +179,11 @@
   right: 0;
   bottom: 0;
   z-index: 14;
-}
-.modalMask.modalMaskOpen {
   background-color: rgba(0,0,0,.5);
 }
+.modalMask.modalMaskOpen {
+  display: block;
+}
 .modalMask.modalMaskClose {
-  background-color: transparent;
-  z-index: 0;
+  display: none;
 }
