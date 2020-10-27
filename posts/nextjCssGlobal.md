@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-10-25 19:34:57
- * @LastEditTime: 2020-10-26 23:40:09
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /sunnercms-nextJsBlog/posts/nextjCssGlobal.md
--->
 ---
 title: '自定义组件引入样式'
 date: '2020-01-02'
@@ -17,6 +9,6 @@ Global CSS cannot be imported from files other than your Custom <App>. Please mo
 Read more: https://err.sh/next.js/css-global
 
 问题：样式文件名定义错误
-`index.module.less`定义成为了 `index.moudles.css`
+`index.module.less`定义成为了 `index.moudles.less`
 
 
