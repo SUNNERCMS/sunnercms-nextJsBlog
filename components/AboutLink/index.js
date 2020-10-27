@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-10-25 22:33:24
- * @LastEditTime: 2020-10-25 22:40:42
+ * @LastEditTime: 2020-10-26 23:42:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/AboutLink/index.js
  */
 import React, { Component } from 'react';
-import styles from './index.module.scss';
+import styles from './index.module.less';
 class AboutLink extends Component {
   render() {
     return (

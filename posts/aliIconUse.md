@@ -28,7 +28,7 @@ date: '2020-01-02'
 ```html
 <script src="/aliIcon/iconfont.js"></script>
 ```
-- 加入通用 CSS 代码（引入一次就行），加在了全局样式文件中`globals.scss`
+- 加入通用 CSS 代码（引入一次就行），加在了全局样式文件中`globals.less`
 ```css
 .icon {
   width: 1em;

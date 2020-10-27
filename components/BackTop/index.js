@@ -7,7 +7,7 @@
  * @FilePath: /sunnercms-nextJsBlog/components/BackTop/index.js
  */
 import React from 'react'
-import styles from './index.module.scss'
+import styles from './index.module.less'
 export default function BackTop(props) {
   
   const backTopHandle = () => {

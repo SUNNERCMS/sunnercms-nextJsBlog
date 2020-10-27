@@ -1,5 +1,5 @@
 import Layout from '../components/Layout/index';
-import styles from './index.module.scss';
+import styles from './index.module.less';
 import HotPages from '../components/HotPages/index';
 import AboutLink from '../components/AboutLink/index';
 import IntroduceDesc from '../components/IntroduceDesc/index';
@@ -8,6 +8,7 @@ import BackTop from '../components/BackTop/index';
 // import CopyRight from '../components/CopyRight/index';
 import { useEffect, useState } from 'react';
 import cls from 'classnames';
+import 'antd/dist/antd.less';
 
 export default function Home({ allPostsData }) {
   let backTopScrollFlag = true;

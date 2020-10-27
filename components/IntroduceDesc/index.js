@@ -7,7 +7,7 @@
  * @FilePath: /sunnercms-nextJsBlog/components/IntroduceDesc/index.js
  */
 import React from 'react';
-import styles from './index.module.scss';
+import styles from './index.module.less';
 
 export default function IntroduceDesc() {
   return (

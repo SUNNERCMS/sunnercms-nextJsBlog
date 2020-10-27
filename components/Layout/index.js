@@ -7,8 +7,8 @@
  * @FilePath: /my-app/components/Layout/index.js
  */
 import Head from 'next/head'
-import styles from './index.module.scss'
-import utilStyles from '../../styles/utils.module.scss'
+import styles from './index.module.less'
+import utilStyles from '../../styles/utils.module.less'
 import Link from 'next/link'
 
 const name = 'zhaoxiang.sun'

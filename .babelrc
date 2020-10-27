@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "next/babel", "@babel/preset-react" 
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        // true 的时候才会编译less
+        "style": true
+      }
+    ]
+  ]
+}
+
+//"next/babel" Next.js的配置文件，相当于继承了它本身的所有配置
+//只加载项目中用到的模块，这就需要我们用到一个babel-plugin-import文件，配置好了 .babelrc 就不会把Ant Design打包到生产环境。

@@ -6,7 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: /my-app/pages/_app.js
  */
-import '../styles/globals.scss'
+import '../styles/globals.less'
 // 该MyApp组件是顶级组件，将在所有不同页面上通用。例如，在页面之间导航时，可以使用此组件来保持状态。
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

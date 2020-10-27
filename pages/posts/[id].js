@@ -11,7 +11,7 @@ import Layout from '../../components/Layout/index'
 import Date from '../../components/Date/index'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
-import utilStyles from '../../styles/utils.module.scss'
+import utilStyles from '../../styles/utils.module.less'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
