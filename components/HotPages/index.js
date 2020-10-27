@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-24 21:55:20
- * @LastEditTime: 2020-10-27 16:22:55
+ * @LastEditTime: 2020-10-27 16:52:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/HotPages/index.js
@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 import styles from './index.module.less';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-import { Button, message } from 'antd';
+import { Button, message, Tooltip } from 'antd';
 // import 'antd/dist/antd.css'; 
 
 class HotPages extends Component {
@@ -27,7 +27,7 @@ class HotPages extends Component {
 
   onCopyCallBack = () => {
     console.log('3-00000');
-    message.success('复制成功');
+    message.success('复制成功',0.5);
   }
 
   render() {

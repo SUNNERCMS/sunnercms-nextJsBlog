@@ -1,7 +1,7 @@
 /*
- * @Author: your name
+ * @Author: zhaoxiang.sun
  * @Date: 2020-10-26 23:35:39
- * @LastEditTime: 2020-10-27 16:19:37
+ * @LastEditTime: 2020-10-27 17:07:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/next.config.js

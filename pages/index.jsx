@@ -8,7 +8,7 @@ import BackTop from '../components/BackTop/index';
 // import CopyRight from '../components/CopyRight/index';
 import { useEffect, useState } from 'react';
 import cls from 'classnames';
-import 'antd/dist/antd.less';
+// import 'antd/dist/antd.less';
 
 export default function Home({ allPostsData }) {
   let backTopScrollFlag = true;
@@ -68,7 +68,7 @@ export default function Home({ allPostsData }) {
           <div className={styles.enterButton}>Enter Blog</div>
         </div>
         <div className={styles.navigatoDrawer} onClick={openRightDrawer}>
-          <svg className="icon" aria-hidden="true">
+          <svg className={styles.icon} aria-hidden="true">
             <use xlinkHref="#icon-daohangzhankai1"></use>
           </svg>
         </div>
@@ -99,7 +99,7 @@ export default function Home({ allPostsData }) {
             </div>
           </div>
           <div className={styles.drawerButton} onClick={closeRightDrawer}>
-            <svg className="icon" aria-hidden="true">
+            <svg className={styles.icon} aria-hidden="true">
               <use xlinkHref="#icon-daohangshouqi"></use>
             </svg>
           </div>
