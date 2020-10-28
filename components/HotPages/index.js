@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-24 21:55:20
- * @LastEditTime: 2020-10-27 20:13:28
+ * @LastEditTime: 2020-10-27 22:53:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/HotPages/index.js
@@ -27,7 +27,7 @@ class HotPages extends Component {
 
   onCopyCallBack = () => {
     console.log('3-00000');
-    message.success('复制成功',0.5);
+    message.success('链接复制成功',0.6);
   }
 
   render() {
@@ -35,9 +35,9 @@ class HotPages extends Component {
       <div className={styles.hotPagesContainer}>
         <h1>热门文章</h1>
         <div className={styles.titleDesc}>
-          fhadklfjladjf福卡发发呆的卷发的减肥
-          <br/>
-          fhadklfjladjf福卡发发呆的卷发的减肥
+          欢迎阅读、收藏、分享热门文章
+          {/* <br/>
+          昨夜的那场电影,还有我的心情. */}
         </div>
         <div className={styles.contents}>
           <div className={styles.contentItem}>

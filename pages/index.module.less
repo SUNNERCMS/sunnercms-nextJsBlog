@@ -1,4 +1,5 @@
 .homePageContainer {
+  // position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,12 +34,12 @@
       padding: 8px 18px;
       font-size: 14px;
       border-radius: 2px;
-      background-color: #1E9FFF;
+      background-color: #1890ff;
       margin-top: 20px;
       user-select: none;
     }
     .enterButton:hover{
-      opacity: 0.8;
+      background-color: #1E9FFF;
     }
   }
   @keyframes homeInfoScale {
@@ -47,6 +48,36 @@
     }
     100% {
       transform: scale(1.0);
+    }
+  }
+
+  .downArrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    animation: downArrowAni 1s ease-out 1;
+
+    .downArrowIcon {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      padding: 5px;
+      transition: all 0.5s;
+    }
+    .downArrowIcon:hover {
+      background-color: rgba(238, 231, 231, 0.3);
+      // background-color: #1890ff;
+      transform: scale(1.1);
+    }
+  }
+  @keyframes downArrowAni {
+    0% {
+      bottom: 0;
+    }
+    100% {
+      bottom: 30px;
     }
   }
 

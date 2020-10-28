@@ -46,7 +46,15 @@ export default function Home({ allPostsData }) {
     }
   }
 
+  const downArrowNextPageHandle = () => {
+    window.scrollTo({
+      top: document.body.clientHeight,
+      behavior: 'smooth'
+    });
+  }
+
   useEffect(() => {
+    console.log('document.body.clientHeight', document.body.clientHeight)
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -70,6 +78,11 @@ export default function Home({ allPostsData }) {
         <div className={styles.navigatoDrawer} onClick={openRightDrawer}>
           <svg className={styles.icon} aria-hidden="true">
             <use xlinkHref="#icon-daohangzhankai1"></use>
+          </svg>
+        </div>
+        <div className={styles.downArrow} onClick={downArrowNextPageHandle}>
+          <svg className={styles.downArrowIcon} aria-hidden="true">
+            <use xlinkHref="#icon-arrow-up"></use>
           </svg>
         </div>
         {/* 首页右侧抽屉 */}

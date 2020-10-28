@@ -1,7 +1,7 @@
 /*
  * @Author: zhaoxiang.sun
  * @Date: 2020-10-26 23:35:39
- * @LastEditTime: 2020-10-27 17:07:14
+ * @LastEditTime: 2020-10-27 20:48:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/next.config.js
@@ -14,7 +14,6 @@ const withPlugins = require('next-compose-plugins');
 const withLess = require('@zeit/next-less');
 const path = require('path');
 const loaderUtils = require('loader-utils');
-// const webpack = require('webpack');
 
 function getLocalIdent(loaderContext, localIdentName, localName, options) {
   if (!options.context) {
@@ -61,9 +60,7 @@ module.exports = withPlugins([withLess], {
       const includes = [/antd/];
       config.externals = config.externals.map((external) => {
         if (typeof external !== 'function') return external;
-        return (ctx, req, cb) => (includes.find((include) => (req.startsWith('.')
-          ? include.test(path.resolve(ctx, req))
-          : include.test(req)))
+        return (ctx, req, cb) => (includes.find((include) => (req.startsWith('.') ? include.test(path.resolve(ctx, req)) : include.test(req)))
           ? cb()
           : external(ctx, req, cb));
       });
@@ -71,3 +68,10 @@ module.exports = withPlugins([withLess], {
     return config;
   }
 })
+
+/*
+ctx, req, cb:
+context (string): 包含引用的文件目录。
+request (string): 被请求引入的路径。
+callback (function (err, result, type)): 用于指明模块如何被外部化的回调函数
+*/
