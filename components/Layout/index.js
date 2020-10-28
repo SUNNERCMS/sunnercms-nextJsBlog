@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-24 15:36:58
- * @LastEditTime: 2020-10-23 11:03:29
+ * @LastEditTime: 2020-10-28 16:21:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-app/components/Layout/index.js
@@ -33,6 +33,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" /> 
         <script src="/aliIcon/iconfont.js"></script>
       </Head>
       {/* <header className={styles.header}>

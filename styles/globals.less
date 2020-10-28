@@ -1,12 +1,13 @@
 
-html,
+html { 
+  font-size:6.25%;
+}
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
 }
 
 * {
@@ -27,11 +28,17 @@ img {
   display: block;
 }
 
-.icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-  font-size: 24px;
-}
+@media screen and (max-width: 600px) {html{font-size:3.25%;}}
+@media screen and (min-width: 600px) {html{font-size:3.25%;}}
+@media screen and (min-width: 900px) {html{font-size:5.25%;}}
+@media screen and (min-width: 1200px) {html{font-size:6.25%;}}
+@media screen and (min-width: 1800px) {html{font-size:7.0%;}}
+
+/*
+@media screen and (min-width: 640px) {html{font-size:6.25%;}}
+应用上面的公式：
+
+1rem = 1 * 6.25% * 16px
+其中：6.25% * 16 = 0.0625 * 16 = 1
+所以：1rem = 1px
+*/
