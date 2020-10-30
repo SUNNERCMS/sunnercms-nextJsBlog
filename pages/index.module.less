@@ -152,9 +152,14 @@
       .desText {
         margin-bottom: 10rem;
       }
-      .linkIconBar i {
+      .linkIconBar a {
+        display: inline-block;
         margin: 0rem 15rem;
         text-align: justify;
+        color: rgba(0, 0, 0, 0.85);
+      }
+      .linkIconBar a:hover {
+        transform: scale(1.1);
       }
       .concatInfo {
         display: flex;
@@ -166,9 +171,13 @@
           margin-left: 5rem;
         }
 
-        .concatInfoTopLine i {
-          margin-right: 20rem;
+        .concatInfoTopLine {
+          margin-bottom: 4rem;
+          i {
+            margin-right: 20rem;
+          }
         }
+        
       }
     }
     .drawerButton {

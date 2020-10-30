@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-24 21:55:20
- * @LastEditTime: 2020-10-30 22:56:32
+ * @LastEditTime: 2020-10-30 23:31:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/HotPages/index.js
@@ -17,7 +17,7 @@ class HotPages extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '2unfaf'
+      value: 'https://sunzhaoxiang.blog.csdn.net/'
     }
   }
 
@@ -26,7 +26,6 @@ class HotPages extends Component {
   }
 
   onCopyCallBack = () => {
-    console.log('3-00000');
     message.success('链接复制成功',0.6);
   }
 

@@ -5,6 +5,7 @@ import AboutLink from '../components/AboutLink/index';
 import IntroduceDesc from '../components/IntroduceDesc/index';
 import HomeFooter from '../components/HomeFooter/index';
 import BackTop from '../components/BackTop/index';
+import Link from 'next/link'
 // import CopyRight from '../components/CopyRight/index';
 import { useEffect, useState } from 'react';
 import cls from 'classnames';
@@ -53,6 +54,10 @@ export default function Home({ allPostsData }) {
     });
   }
 
+  const aboutMeLink = () => {
+    window.open("https://sunzhaoxiang.blog.csdn.net");
+  }
+
   useEffect(() => {
     console.log('document.body.clientHeight', document.body.clientHeight)
     window.scrollTo({
@@ -73,7 +78,7 @@ export default function Home({ allPostsData }) {
         <div className={styles.homeInfoContainer}>
           <div className={styles.title}>孙&nbsp;赵&nbsp;祥</div>
           <div className={styles.subTitle}>剑气纵横三万里，一剑光寒十九洲</div>
-          <div className={styles.enterButton}>Enter Blog</div>
+          <div className={styles.enterButton} onClick={aboutMeLink}>Enter Blog</div>
         </div>
         <div className={styles.navigatoDrawer} onClick={openRightDrawer}>
           <svg className={styles.icon} aria-hidden="true">
@@ -98,9 +103,9 @@ export default function Home({ allPostsData }) {
             <div className={styles.nameDes}>zhaoxiang.sun</div>
             <div className={styles.desText}>为之则易 不为则难</div>
             <div className={styles.linkIconBar}>
-              <i className="iconfont icon-github"></i>
-              <i className="iconfont icon-csdn"></i>
-              <i className="iconfont icon-xieboke"></i>
+              <a href="https://github.com/SUNNERCMS" className="iconfont icon-github"></a>
+              <a href="https://sunzhaoxiang.blog.csdn.net" className="iconfont icon-csdn"></a>
+              <a href="https://sunzhaoxiang.com" className="iconfont icon-xieboke"></a>
             </div>
             <div className={styles.concatInfo}>
               <div className={styles.concatInfoTopLine}>
