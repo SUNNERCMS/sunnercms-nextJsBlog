@@ -17,8 +17,15 @@ class HotPages extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'https://sunzhaoxiang.blog.csdn.net/'
+      firstvalue: 'https://sunzhaoxiang.blog.csdn.net/article/details/109319412',
+      secondvalue: 'https://sunzhaoxiang.blog.csdn.net/article/details/81671304',
+      thirdvalue: 'https://sunzhaoxiang.blog.csdn.net/article/details/80006224'
     }
+  }
+
+  linkjump = (path) => {
+    console.log('path', path)
+    window.open(path);
   }
 
   copyLinkHandle = () => {
@@ -41,7 +48,7 @@ class HotPages extends Component {
         <div className={styles.contents}>
           <div className={styles.contentItem}>
             <div className={styles.imgContainer}>
-              <CopyToClipboard text={this.state.value} onCopy={this.onCopyCallBack}>
+              <CopyToClipboard text={this.state.firstvalue} onCopy={this.onCopyCallBack}>
                 <div className={ `${styles.imgMask} ${styles.sweepToBottom}`} onClick={this.copyLinkHandle}>
                   <i className="iconfont icon-fuzhilianjie"></i>
                 </div>
@@ -52,18 +59,18 @@ class HotPages extends Component {
               />
             </div>
             <div className={styles.itemInfo}>
-              <div className={styles.itemName}>新增qq应用</div>
-              <div className={styles.itemDate}>2019年12月24日</div>
+              <div className={styles.itemName}>next.js中antd引入以及按需加载</div>
+              <div className={styles.itemDate}>2020-10-27 20:03:52</div>
               <p className={styles.itemDesc}>
-                激发了房间里的卷发简法定放假啊老骥伏枥的减肥 u 让卷发短款礼服发发呆了卷发短款两间房单就发儿啊就发来的附加费阿迪风景
+              next.js中antd引入以及按需加载配置，踩坑记录。
               </p>
-              <div className={styles.readMore}>阅读更多</div>
+              <div className={styles.readMore} onClick={() => this.linkjump(this.state.firstvalue)}>阅读更多</div>
             </div>
           </div>
 
           <div className={styles.contentItem}>
             <div className={styles.imgContainer}>
-              <CopyToClipboard text={this.state.value} onCopy={this.onCopyCallBack}>
+              <CopyToClipboard text={this.state.secondvalue} onCopy={this.onCopyCallBack}>
                 <div className={ `${styles.imgMask} ${styles.sweepToBottom}`} onClick={this.copyLinkHandle}>
                   <i className="iconfont icon-fuzhilianjie"></i>
                 </div>
@@ -74,19 +81,19 @@ class HotPages extends Component {
               />
             </div>
             <div className={styles.itemInfo}>
-              <div className={styles.itemName}>新增qq应用</div>
+              <div className={styles.itemName}>js事件循环机制</div>
               <div className={styles.itemDate}>2019年12月24日</div>
               <p className={styles.itemDesc}>
-                激发了房间里的卷发简法定放假啊老骥伏枥的减肥 u 让卷发短款礼服发发呆了卷发短款两间房单就发儿啊就发来的附加费阿迪风景
+              一、JS单线程、异步、同步概念,从上一篇说明vue nextTick的文章中，多次出现“事件循环”这个名词，简单说明了事件循环的步骤，以便理解nextTick的运行时机，这篇文章将更为详细的分析下事件循环。在此之前需要了解JS单线程，及由此产生的
               </p>
-              <div className={styles.readMore}>阅读更多</div>
+              <div className={styles.readMore} onClick={() => this.linkjump(this.state.secondvalue)}>阅读更多</div>
             </div>
           </div>
 
 
           <div className={styles.contentItem}>
             <div className={styles.imgContainer}>
-              <CopyToClipboard text={this.state.value} onCopy={this.onCopyCallBack}>
+              <CopyToClipboard text={this.state.thirdvalue} onCopy={this.onCopyCallBack}>
                 <div className={ `${styles.imgMask} ${styles.sweepToBottom}`} onClick={this.copyLinkHandle}>
                   <i className="iconfont icon-fuzhilianjie"></i>
                 </div>
@@ -97,12 +104,12 @@ class HotPages extends Component {
               />
             </div>
             <div className={styles.itemInfo}>
-              <div className={styles.itemName}>新增qq应用</div>
-              <div className={styles.itemDate}>2019年12月24日</div>
+              <div className={styles.itemName}>希尔排序--简单易懂图解</div>
+              <div className={styles.itemDate}>2018-04-19 15:56:22</div>
               <p className={styles.itemDesc}>
-                激发了房间里的卷发简法定放假啊老骥伏枥的减肥 u 让卷发短款礼服发发呆了卷发短款两间房单就发儿啊就发来的附加费阿迪风景
+              图解算法---希尔排序前情回顾：直接插入排序（对插入排序不熟悉的建议先阅读此文）一天，一尘拿着扑克自己在那玩，刚被师傅看见了首先它把较大的数据集合分割成若干个小组（逻辑上分组），然后对每一个小组分别进行插入排序，此时，插入排序所作用
               </p>
-              <div className={styles.readMore}>阅读更多</div>
+              <div className={styles.readMore} onClick={() => this.linkjump(this.state.thirdvalue)}>阅读更多</div>
             </div>
           </div>
         </div>
