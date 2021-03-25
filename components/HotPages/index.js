@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-24 21:55:20
- * @LastEditTime: 2020-10-27 22:53:56
+ * @LastEditTime: 2020-10-30 23:55:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/HotPages/index.js
@@ -33,7 +33,6 @@ class HotPages extends Component {
   }
 
   onCopyCallBack = () => {
-    console.log('3-00000');
     message.success('链接复制成功',0.6);
   }
 
@@ -55,7 +54,7 @@ class HotPages extends Component {
                 </div>
               </CopyToClipboard>
               <img
-                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603651196522&di=a16700caf33d74f13f72dc94aeb6bdaf&imgtype=0&src=http%3A%2F%2Fimg.yuntiy.com%2Fillustration%2F1535098791991.jpg"
+                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3155886573,2573739945&fm=26&gp=0.jpg"
                 className={styles.itemImage}
               />
             </div>
@@ -68,6 +67,7 @@ class HotPages extends Component {
               <div className={styles.readMore} onClick={() => this.linkjump(this.state.firstvalue)}>阅读更多</div>
             </div>
           </div>
+
           <div className={styles.contentItem}>
             <div className={styles.imgContainer}>
               <CopyToClipboard text={this.state.secondvalue} onCopy={this.onCopyCallBack}>
@@ -76,7 +76,7 @@ class HotPages extends Component {
                 </div>
               </CopyToClipboard>
               <img
-                src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3155886573,2573739945&fm=26&gp=0.jpg"
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603651196522&di=a16700caf33d74f13f72dc94aeb6bdaf&imgtype=0&src=http%3A%2F%2Fimg.yuntiy.com%2Fillustration%2F1535098791991.jpg"
                 className={styles.itemImage}
               />
             </div>
@@ -89,6 +89,8 @@ class HotPages extends Component {
               <div className={styles.readMore} onClick={() => this.linkjump(this.state.secondvalue)}>阅读更多</div>
             </div>
           </div>
+
+
           <div className={styles.contentItem}>
             <div className={styles.imgContainer}>
               <CopyToClipboard text={this.state.thirdvalue} onCopy={this.onCopyCallBack}>

@@ -1,14 +1,14 @@
 .homeContainer {
   display: flex;
   align-items: center;
-  height: 340rem;
+  // height: 340rem;
   background-color: #232328;
   color: #fff;
-  padding: 0 80rem;
+  padding: 80rem 8%;
 
   .mySelf {
-    margin-right: 200rem;
-
+    margin-right: 5%;
+    flex-grow: 0.5;
     h4 {
       font-size: 18rem;
     }
@@ -34,7 +34,8 @@
     }
   }
   .relativedLink {
-    margin-right: 120rem;
+    // flex-grow: 1;
+    margin-right: 10%;
     display: flex;
     flex-direction: column;
 
@@ -62,5 +63,22 @@
   }
   i {
     margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80rem 40rem;
+
+    .mySelf, .relativedLink {
+      margin-bottom: 20rem;
+    }
+    .mySelf {
+      .aboutMeButton {
+        width: 140rem;
+      }
+    }
   }
 }

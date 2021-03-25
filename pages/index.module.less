@@ -128,10 +128,10 @@
       .drawerImgContainer {
         box-sizing: border-box;
         padding: 2rem;
-        width: 28vh;
-        height: 28vh;
+        width: 16vw;
+        height: 16vw;
         border: 1rem solid #999;
-        border-radius: 14vh;
+        border-radius: 8vw;
         overflow: hidden;
         margin-bottom: 60rem;
         margin-top: -80rem;
@@ -152,9 +152,14 @@
       .desText {
         margin-bottom: 10rem;
       }
-      .linkIconBar i {
+      .linkIconBar a {
+        display: inline-block;
         margin: 0rem 15rem;
         text-align: justify;
+        color: rgba(0, 0, 0, 0.85);
+      }
+      .linkIconBar a:hover {
+        transform: scale(1.1);
       }
       .concatInfo {
         display: flex;
@@ -166,9 +171,13 @@
           margin-left: 5rem;
         }
 
-        .concatInfoTopLine i {
-          margin-right: 20rem;
+        .concatInfoTopLine {
+          margin-bottom: 4rem;
+          i {
+            margin-right: 20rem;
+          }
         }
+        
       }
     }
     .drawerButton {
@@ -225,4 +234,23 @@
 }
 .modalMask.modalMaskClose {
   display: none;
+}
+@media (max-width: 680px) {
+  .homePageContainer {
+    .rightDrawer {
+      width: 50vw;
+      border-left: 0vh solid white;
+      .drawerInfo {
+        margin-left: 0rem;
+        .drawerImgContainer {
+          width: 24vw;
+          height: 24vw;
+          border-radius: 12vw;
+        }
+        span {
+          font-size: 20rem;
+        }
+      }
+    }
+  }
 }

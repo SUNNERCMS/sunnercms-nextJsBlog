@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-25 23:00:36
- * @LastEditTime: 2020-10-27 22:59:31
+ * @LastEditTime: 2020-10-30 23:28:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /sunnercms-nextJsBlog/components/IntroduceDesc/index.js
@@ -11,12 +11,17 @@ import styles from './index.module.less';
 import { Button } from 'antd';
 
 export default function HomeFooter() {
+
+  const aboutMeLink = () => {
+    window.open("https://sunzhaoxiang.blog.csdn.net");
+  }
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.mySelf}>
         <div className={styles.partTitle}>孙赵祥</div>
         <p>剑气纵横三万里，一剑光寒十九洲。</p>
-        <div className={styles.aboutMeButton}>About Me</div>
+        <div className={styles.aboutMeButton} onClick={aboutMeLink}>About Me</div>
       </div>
       <div className={styles.relativedLink}>
         <div className={styles.partTitle}>相关链接</div>
